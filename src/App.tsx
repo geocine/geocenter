@@ -1,7 +1,7 @@
 import { invoke } from "@tauri-apps/api";
 import { atom, useAtom } from "jotai";
 import { useEffect } from "react";
-import { RiFullscreenLine } from 'react-icons/ri';
+import { RiFullscreenLine } from "react-icons/ri";
 
 const countAtom = atom(0);
 const greetingAtom = atom("Hello");
@@ -11,9 +11,9 @@ function App() {
   const [greeting, setGreeting] = useAtom(greetingAtom);
 
   // add fullscreen change listener then send to tauri
-  useEffect(() => {  
+  useEffect(() => {
     const onFullscreenChange = () => {
-      // log  
+      // log
       console.log("fullscreen change");
       invoke("fullscreen_change", {
         isFullscreen: document.fullscreenElement !== null,
@@ -35,14 +35,14 @@ function App() {
   };
 
   const toggleFullscreen = () => {
-      let body = document.querySelector('body');
-      if( document.fullscreenElement !== null ) {
-        // exit full screen if already in full screen
-        document.exitFullscreen();
-      } else {
-        // enter full screen
-        body?.requestFullscreen();
-      }
+    let body = document.querySelector("body");
+    if (document.fullscreenElement !== null) {
+      // exit full screen if already in full screen
+      document.exitFullscreen();
+    } else {
+      // enter full screen
+      body?.requestFullscreen();
+    }
 
   };
 
