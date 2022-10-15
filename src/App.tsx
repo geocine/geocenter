@@ -134,7 +134,7 @@ function App() {
                       {count}
                     </span>
                     <button
-                      className="px-3 py-1 rounded-md bg-indigo-600 text-white mb-3"
+                      className="inline-flex items-center px-4 py-2 bg-indigo-200 hover:bg-gray-300 text-gray-800 text-sm font-medium rounded-md"
                       onClick={increment}
                     >
                       Increment
