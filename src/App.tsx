@@ -2,13 +2,17 @@ import { invoke } from "@tauri-apps/api";
 import { atom, useAtom } from "jotai";
 import { useEffect } from "react";
 import { RiFullscreenLine } from "react-icons/ri";
+import Link from "./Link"
 
 const countAtom = atom(0);
 const greetingAtom = atom("Hello");
+const activeLinkAtom = atom("dashboard");  // Default to "dashboard" or any initial value
 
 function App() {
   const [count, setCount] = useAtom(countAtom);
   const [greeting, setGreeting] = useAtom(greetingAtom);
+  const [activeLink, setActiveLink] = useAtom(activeLinkAtom);
+
 
   // add fullscreen change listener then send to tauri
   useEffect(() => {
