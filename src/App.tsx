@@ -82,10 +82,7 @@ function App() {
           </Link>
 
           
-          <a
-            className="flex items-center justify-center w-12 h-12 mt-2 rounded hover:bg-gray-700 hover:text-gray-300"
-            href="#"
-          >
+          <Link label="search" onClick={setActiveLink} key="search" activeLink={activeLink}>
             <svg
               className="w-6 h-6 stroke-current"
               xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +97,7 @@ function App() {
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               ></path>
             </svg>
-          </a>
+          </Link>
           <a
             className="flex items-center justify-center w-12 h-12 mt-2 text-gray-200 bg-gray-700 rounded"
             href="#"
